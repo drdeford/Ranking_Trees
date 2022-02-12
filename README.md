@@ -1,2 +1,2 @@
 # Ranking_Trees
-Jupyter notebooks for Ranking Trees Based on Global Centrality Measures
+Python code and Jupyter notebooks for *Ranking Trees Based on Global Centrality Measures*
