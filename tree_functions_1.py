@@ -185,8 +185,6 @@ def get_stirling_trees(T, n):
     
     return list(truecounts)
 
-    return sum([(degrees[-1] - degrees[i]) / (n**2 - 3*n + 2) for i in range(n)])
-
 #--
 
 def get_closeness_seq(G):
