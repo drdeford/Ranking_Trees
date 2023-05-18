@@ -14,11 +14,19 @@ The poset structures on the set of non-isomorphic unlabelled trees based on path
 <center>
   <table>
     <tr>
-      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/path_to_star_11.png' width = '400'>
+      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/path_to_star_11.png' width = '400'>
       <br>The poset structure for trees of order 11 based on the path-to-star algorithm
       </td>
-      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/star_to_path_11.png' width = '400'>
+      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/star_to_path_11.png' width = '400'>
       <br>The poset structure for trees of order 11 based on the star-to-path algorithm
+      </td>
+    </tr>
+    <tr>
+      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/trees_clo_11.png' width = '400'>
+      <br>The scatterplot for the association between global closeness centrality and $(n-2)^{\text{nd}}$ Stirling number of the first kind for trees of order $11$
+      </td>
+      <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/trees_bet_11.png' width = '400'>
+      <br>The scatterplot for the association between global betweenness centrality and $(n-2)^{\text{nd}}$ Stirling number of the first kind for trees of order $11$
       </td>
     </tr>
   </table>
@@ -33,15 +41,15 @@ Some of the results regarding closeness and betweenness centralities for small t
 Contains the code for comparing total orderings obtained from the distinguishing polynomial using two different approaches (degree-based and evaluation-based).
 
 <center>Comparing degree-based and evaluation-based orderings</center>
-<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/ranking_total.gif' width = '400'></center>
+<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/ranking_total.gif' width = '400'></center>
 <br>
 
 <centre>Comparing path-to-star-based and evaluation-based orderings<br></center>
-<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/ranking_path_to_star.gif' width = '400'></center>
+<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/ranking_path_to_star.gif' width = '400'></center>
 <br>
 
 <center>Comparing star-to-path-based and evaluation-based orderings</center>
-<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/ranking_star_to_path.gif' width = '400'></center>
+<center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/ranking_star_to_path.gif' width = '400'></center>
 <br>
 
 ## **Ranking\_Trees--Distinguishing\_Polynomials\_1.0.ipynb**
