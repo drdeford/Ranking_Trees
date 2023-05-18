@@ -21,6 +21,10 @@ The poset structures on the set of non-isomorphic unlabelled trees based on path
       <br>The poset structure for trees of order 11 based on the star-to-path algorithm
       </td>
     </tr>
+  </table>
+</center>
+<center>
+  <table>
     <tr>
       <td><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/trees_clo_11.png' width = '400'>
       <br>The scatterplot for the association between global closeness centrality and $(n-2)^{\text{nd}}$ Stirling number of the first kind for trees of order $11$
