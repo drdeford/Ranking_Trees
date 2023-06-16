@@ -1,11 +1,20 @@
 # Python code and Jupyter notebooks for *Ranking Trees Based on Global Centrality Measures*
 
 Trees, or connected graphs with no cycles, are a commonly studied combinatorial family, and the star 
-graph and path graph of a fixed size are frequently extremal values for natural metrics on networks 
-and graphs. In the paper *Ranking Trees Based on Global Centrality Measures*, 
-we prove several monotonicity results for global centrality measures and 
-Stirling numbers that interpolate these extremes. The Python code here helps us explore
-some of these properties computationally. 
+graph and the path of a fixed order $n$ frequently provide extremal values for 
+natural metrics on networks and graphs. In the paper *Ranking Trees Based on Global Centrality Measures*, 
+we prove inequalities for several global centrality measures, such as global closeness and betweenness centralities, 
+and for graphical Stirling numbers of the first kind that interpolate these extremes. 
+Moreover, we provide two algorithms that allow us to traverse the space of non-isomorphic 
+trees of a fixed order, one towards the star graph of the same order and the other towards the path. 
+Furthermore, we investigate the relationship between these global centrality measures on the one hand
+and the $(n-2)$-nd Stirling numbers of the first kind for small trees on the other hand, demonstrating a strong association between them, in particular with respect 
+to the partial orderings obtained from applying our two interpolating algorithms. Based on our observations from these small trees, 
+we prove general bounds that relate the $(n-2)$nd Stirling numbers of the first kind of trees of order $n$ to these global centrality measures. Finally, we provide two related approaches to totally order the set of all non-isomorphic trees of fixed order. We show that the totally ordering
+obtained from one of these approaches is consistent with the poset structure obtained from our two 
+tree interpolation algorithms in addition to being one of the features to use for predicting the $(n-2)$-nd Stirling numbers of the first kind for small trees.
+The Python code here helps us explore some of these properties computationally.
+ 
 
 ## **Ranking\_Trees--Centrality\_Bounds\_1.0.ipynb** 
 
@@ -42,7 +51,7 @@ Some of the results regarding closeness and betweenness centralities for small t
 
 ## **Ranking\_Trees--Comparing\_Total\_Orderings\_1.0.ipynb**
 
-Contains the code for comparing total orderings obtained from the distinguishing polynomial using two different approaches (degree-based and evaluation-based).
+This notebook contains the code for comparing total orderings obtained from the distinguishing polynomial using two different approaches (degree-based and evaluation-based).
 
 <center>Comparing degree-based and evaluation-based orderings</center>
 <center><img src = 'https://github.com/drdeford/Ranking_Trees/blob/main/Figures/ranking_total.gif' width = '400'></center>
@@ -58,11 +67,11 @@ Contains the code for comparing total orderings obtained from the distinguishing
 
 ## **Ranking\_Trees--Distinguishing\_Polynomials\_1.0.ipynb**
 
-Contains the code for computing the total orderings obtained from the distinguishing polynomial using two different approaches (degree-based and evaluation-based) and for exploring the connections between these total orderings and other graph statistics discussed in the paper.
+This notebook contains the code for computing the total orderings obtained from the distinguishing polynomial using two different approaches (degree-based and evaluation-based) and for exploring the connections between these total orderings and other graph statistics discussed in the paper.
 
 ## **Ranking\_Trees--Small\_Examples\_1.0.ipynb**
 
-Contains the explanatory data visualizations for small trees.
+This notebook contains the explanatory data visualizations for small trees.
 
 ## **tree\_functions_1.py** 
 
