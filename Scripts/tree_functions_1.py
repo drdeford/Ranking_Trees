@@ -382,12 +382,15 @@ def step_to_path(tree):
         
             leaves.append((n, nx.shortest_path_length(nt, n, cc_list[0][0])))
                           
+    
+    
     leaves = sorted(leaves, key = lambda x: x[1])
     
+    
+    
+    #s = sample([0, 1], 1)[0]
+    s = 0 # remove randomness
     nt.remove_node(leaves[0][0])
-    
-    s = sample([0, 1], 1)[0]
-    
     check_node = diam[s]
     
     if leaves[0][0] == check_node:
@@ -397,7 +400,8 @@ def step_to_path(tree):
     else:
     
         nt.add_edge(check_node, leaves[0][0])
-                             
+
+
     return nt
 
 #--
@@ -522,13 +526,13 @@ def pref_graph(n, score_fun):
 
 def get_path_stirling_check(n):
     
-    return (sp.special.binom(n - 1, 2) - (n - 2))/(sp.special.binom(n, 2))
+    return (sp.special.binom(n - 1, 2) - (n - 2))
 
 #--
 
 def get_semipath_stirling_check(n):
     
-    return (sp.special.binom(n - 1, 2) - (n - 1))/(sp.special.binom(n, 2))
+    return (sp.special.binom(n - 1, 2) - (n - 1))
 
 #--
 
@@ -540,7 +544,7 @@ def get_star_stirling_check(n):
 
 def get_semistar_stirling_check(n):
     
-    return (n - 3)/(sp.special.binom(n, 2))
+    return (n - 3)
 
 #--
 
