@@ -158,8 +158,6 @@ def deletion_inclusion_alg_trees(G):
 # returns the list of Stirling numbers for a tree 
 
 def get_stirling_trees(T, n): 
-
-    #n = len(T) #I think this is right?#changed to parameter
     
     m = int(np.ceil((n + 1) / 2))
     
@@ -355,10 +353,6 @@ def step_to_path(tree):
     
     path_dict = dict(nx.shortest_path_length(nt))  
     
-    #print(nt.nodes())
-    
-    #print(path_dict)
-    
     diam = (0, 0, 0)
     
     for n in nt.nodes():
@@ -373,7 +367,6 @@ def step_to_path(tree):
                 
                     diam = (n, m, dist)
                 
-
     leaves = []
     
     for n in nt.nodes():
@@ -382,15 +375,10 @@ def step_to_path(tree):
         
             leaves.append((n, nx.shortest_path_length(nt, n, cc_list[0][0])))
                           
-    
-    
     leaves = sorted(leaves, key = lambda x: x[1])
     
-    
-    
-    #s = sample([0, 1], 1)[0]
-    s = 0 # remove randomness
     nt.remove_node(leaves[0][0])
+    
     check_node = diam[s]
     
     if leaves[0][0] == check_node:
@@ -400,7 +388,6 @@ def step_to_path(tree):
     else:
     
         nt.add_edge(check_node, leaves[0][0])
-
 
     return nt
 
@@ -445,10 +432,6 @@ def nodes_score(T):
     for node in T.nodes():
     
         score_dict[node] = (len(list(T.neighbors(node)))**(7/4))  
-        
-        #if len(list(T.neighbors(node))) == 1:
-        
-        #    score_dict[node] += 2
         
     return score_dict
 
@@ -505,8 +488,6 @@ def pref_graph(n, score_fun):
         norm_list = [x/sum(score_list) for x in score_list]
         
         norm_list = np.cumsum(norm_list)
-        
-        #print(norm_list)
         
         r = random.random()
         
@@ -672,8 +653,6 @@ def find_poly(T, r):
             
     Q.add_edges_from(T.edges())
     
-    #Q = T.copy()
-    
     Q.remove_node(r)
     
     S = [Q.subgraph(c).copy() for c in nx.connected_components(Q)]
@@ -711,16 +690,6 @@ def find_poly(T, r):
                         polys[-1] = polys[-1] + ')'
                         
                         current = parent_dict[current]
-                        
-                        """
-                        if len(not_visited) >= 2:
-                            
-                            current = not_visited[-2]
-                            
-                        else:
-                            
-                            current = not_visited[0]
-                        """
                     
                     else:
                         
@@ -1071,8 +1040,6 @@ def get_total_list_evaluation_based(tree_list, a = 2, b = 1):
         poly_unrooted_list.append([find_factored_poly_unrooted(T).subs(x, a).subs(y, b), T, i])
                       
     sorted_unrooted_list = sorted(poly_unrooted_list, key = lambda k: k[0])
-        
-    #return [sorted_unrooted_list[i][1] for i in range(len(sorted_unrooted_list))]
 
     return sorted_unrooted_list
 
